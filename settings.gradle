@@ -1,0 +1,7 @@
+rootProject.name = 'EJBToEJBApp'
+include 'EJB-App-1'
+include 'EJB-App-2'
+include 'EJB-App-1-Delegate'
+include 'EJB-App-1-Ear'
+include 'EJB-App-2-Ear'
+

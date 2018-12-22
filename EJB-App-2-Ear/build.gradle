@@ -1,0 +1,30 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'ear'
+
+buildscript {
+	ext {
+		
+	}
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		
+	}
+}
+
+
+group = 'com.java.coreJava'
+version = '0.0.1-SNAPSHOT'
+
+repositories {
+	mavenCentral()
+}
+
+
+dependencies {
+	deploy project(path: ':EJB-App-2', configuration: 'archives')
+	// dependent Jar should be added to class path using earlib,so that goes to lib folde while bundling ear
+	earlib  project(path: ':EJB-App-1-Delegate', configuration: 'archives')
+}
